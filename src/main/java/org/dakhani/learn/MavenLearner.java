@@ -21,6 +21,7 @@ import org.dakhani.learn.adapter.DateAdapter;
 public class MavenLearner {
 
 	public static final String PROPERTY_VERSION = "projectVersion";
+	public static final String USER_FULLNAME = "userFullName";
 
 	public static void main(final String[] args) {
 
@@ -31,14 +32,14 @@ public class MavenLearner {
 
 		Properties properties = new PropertyLoader()
 				.loadProperties("learn.properties");
-		if (properties.containsKey(PROPERTY_VERSION)) {
+		if (properties.containsKey(PROPERTY_VERSION))
 			System.out.println(properties.get(PROPERTY_VERSION));
-		}
 
 		properties = new PropertyLoader().loadProperties("maven.properties");
-		if (properties.containsKey(PROPERTY_VERSION)) {
-			System.out.println(properties.get(PROPERTY_VERSION));
-		}
+		if (properties.containsKey(PROPERTY_VERSION))
+			System.out.println(properties.getProperty(PROPERTY_VERSION));
+		if (properties.containsKey(USER_FULLNAME))
+			System.out.println(properties.getProperty(USER_FULLNAME));
 	}
 
 }
