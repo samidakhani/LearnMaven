@@ -34,6 +34,11 @@ public class MavenLearner {
 		if (properties.containsKey(PROPERTY_VERSION)) {
 			System.out.println(properties.get(PROPERTY_VERSION));
 		}
+
+		properties = new PropertyLoader().loadProperties("maven.properties");
+		if (properties.containsKey(PROPERTY_VERSION)) {
+			System.out.println(properties.get(PROPERTY_VERSION));
+		}
 	}
 
 }
