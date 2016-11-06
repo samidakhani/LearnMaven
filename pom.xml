@@ -74,6 +74,14 @@
 					<xjbSources>
 						<xjbSource>src/main/xjb/jaxb-bindings.xjb</xjbSource>
 					</xjbSources>
+					<xjbExcludeFilters>
+						<filter
+							implementation="org.codehaus.mojo.jaxb2.shared.filters.pattern.PatternFileFilter">
+							<patterns>
+								<pattern>\.java</pattern>
+							</patterns>
+						</filter>
+					</xjbExcludeFilters>
 				</configuration>
 			</plugin>
 			<plugin>

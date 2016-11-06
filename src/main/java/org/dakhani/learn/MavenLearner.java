@@ -2,7 +2,7 @@ package org.dakhani.learn;
 
 import java.util.Properties;
 
-import org.dakhani.learn.jaxb.adapter.DateAdapter;
+//import org.dakhani.learn.jaxb.adapter.DateAdapter;
 
 /**
  * @author Sami Dakhani Created on Nov 5, 2016
@@ -15,8 +15,8 @@ public class MavenLearner {
 
 	public static void main(final String[] args) {
 
-		DateAdapter dateAdapter = new DateAdapter();
-		System.out.println(dateAdapter.adaptDate());
+		// DateAdapter dateAdapter = new DateAdapter();
+		// System.out.println(dateAdapter.adaptDate());
 
 		System.out.println(new ResourceLoader().loadResource("learn.txt"));
 
