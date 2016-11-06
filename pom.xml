@@ -54,6 +54,24 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<outputDirectory>src/main/java/</outputDirectory>
+					<extension>true</extension>
+					<generateEpisode>false</generateEpisode>
+					<laxSchemaValidation>true</laxSchemaValidation>
+					<locale>en</locale>
+					<noGeneratedHeaderComments>true</noGeneratedHeaderComments>
+					<readOnly>true</readOnly>
+					<sources>
+						<source>src/main/resources/learnSchema.xsd</source>
+					</sources>
+					<xsdPathWithinArtifact>false</xsdPathWithinArtifact>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.10</version>
