@@ -1,5 +1,5 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://learn.dakhani.org/"
+           targetNamespace="http://jaxb.learn.dakhani.org/"
            elementFormDefault="qualified">
 
 

@@ -59,6 +59,8 @@
 				<version>2.3</version>
 				<configuration>
 					<outputDirectory>src/main/java/</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
+					<enableIntrospection>true</enableIntrospection>
 					<extension>true</extension>
 					<generateEpisode>false</generateEpisode>
 					<laxSchemaValidation>true</laxSchemaValidation>
@@ -69,6 +71,9 @@
 						<source>src/main/resources/learnSchema.xsd</source>
 					</sources>
 					<xsdPathWithinArtifact>false</xsdPathWithinArtifact>
+					<xjbSources>
+						<xjbSource>src/main/xjb/jaxb-bindings.xjb</xjbSource>
+					</xjbSources>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings version="2.1"
+	jaxb:extensionBindingPrefixes="xjc" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:adapter="http://www.dakhani.org/learn/jaxb/adapter"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.dakhani.org/learn/jaxb/adapter" targetNamespace="http://www.dakhani.org/learn/jaxb/adapter">
+
+	<jaxb:globalBindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+		xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+		<!-- Adds Serializable Interface to Java Generated Classes. -->
+		<xjc:serializable uid="1" />
+		<xjc:simple />
+
+		<!-- use Calendar instead of XMLGregorianCalendar -->
+		<jaxb:javaType name="java.util.Date" xmlType="xs:dateTime"
+			parseMethod="org.dakhani.learn.adapter.util.DateAdapter.parseDate"
+			printMethod="org.dakhani.learn.adapter.util.DateAdapter.printDate" />
+
+		<jaxb:javaType name="java.util.Date" xmlType="xs:date"
+			parseMethod="org.dakhani.learn.adapter.util.DateAdapter.parseDate"
+			printMethod="org.dakhani.learn.adapter.util.DateAdapter.printDate" />
+
+
+	</jaxb:globalBindings>
+</jaxb:bindings>
