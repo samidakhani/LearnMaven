@@ -14,12 +14,12 @@
 
 		<!-- use Calendar instead of XMLGregorianCalendar -->
 		<jaxb:javaType name="java.util.Date" xmlType="xs:dateTime"
-			parseMethod="org.dakhani.learn.adapter.util.DateAdapter.parseDate"
-			printMethod="org.dakhani.learn.adapter.util.DateAdapter.printDate" />
+			parseMethod="org.dakhani.learn.jaxb.adapter.util.DateAdapter.parseDate"
+			printMethod="org.dakhani.learn.jaxb.adapter.util.DateAdapter.printDate" />
 
 		<jaxb:javaType name="java.util.Date" xmlType="xs:date"
-			parseMethod="org.dakhani.learn.adapter.util.DateAdapter.parseDate"
-			printMethod="org.dakhani.learn.adapter.util.DateAdapter.printDate" />
+			parseMethod="org.dakhani.learn.jaxb.adapter.DateAdapter.parseDate"
+			printMethod="org.dakhani.learn.jaxb.adapterDateAdapter.printDate" />
 
 
 	</jaxb:globalBindings>
