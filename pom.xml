@@ -8,6 +8,7 @@
 	<description>Learning maven plugins</description>
 	<properties>
 		<user.fullName>Sami Dakhani</user.fullName>
+		<sonar.import_unknown_files>true</sonar.import_unknown_files>
 	</properties>
 	<build>
 		<plugins>
