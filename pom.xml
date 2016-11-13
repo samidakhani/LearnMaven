@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>LearnMaven</name>
-	<description>Learning maven plugins</description>
+	<description>learning maven plugins and their implementation</description>
 
 	<properties>
 		<user.fullName>Sami Dakhani</user.fullName>
