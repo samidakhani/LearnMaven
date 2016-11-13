@@ -6,4 +6,5 @@
 *.project
 *.class
 .checkstyle
+/.sonar
 
