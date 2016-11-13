@@ -1,17 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>org.dakhani.learn.maven</groupId>
 	<artifactId>LearnMaven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>LearnMaven</name>
 	<description>Learning maven plugins</description>
+
 	<properties>
 		<user.fullName>Sami Dakhani</user.fullName>
 		<sonar.import_unknown_files>true</sonar.import_unknown_files>
 	</properties>
+
 	<build>
 		<plugins>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -33,11 +39,23 @@
 									<message>Bad os</message>
 									<family>windows</family>
 								</requireOS>
+								<networkConnectorRule
+									implementation="org.dakhani.learn.enforcer.rule.NetworkConnectorRule">
+									<checkNetwork>true</checkNetwork>
+								</networkConnectorRule>
 							</rules>
 						</configuration>
 					</execution>
 				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.dakhani.learn</groupId>
+						<artifactId>enforcer-maven-rule</artifactId>
+						<version>0.0.1</version>
+					</dependency>
+				</dependencies>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -47,6 +65,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -80,6 +99,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
@@ -111,6 +131,7 @@
 					</xjbExcludeFilters>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
@@ -120,7 +141,9 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
+		
 		</plugins>
+		
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -130,8 +153,10 @@
 				<directory>src/main/resources-filtered</directory>
 				<filtering>true</filtering>
 			</resource>
+		
 		</resources>
 	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -148,6 +173,5 @@
 			<artifactId>javassist</artifactId>
 			<version>3.12.1.GA</version>
 		</dependency>
-
 	</dependencies>
 </project>
